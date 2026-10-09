@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center_horizontal"
+    tools:context=".SecondFragment">
+
+    <!-- カウントダウンタイマー（正解済みの場合のみ表示させる用） -->
+    <TextView
+        android:id="@+id/text_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="7"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/holo_red_dark"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- クイズの枠（先ほど作った枠線のデザインを使い回します） -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/border_background"
+        android:padding="24dp"
+        android:gravity="center_horizontal">
+
+        <!-- 現在の問題数 (例: 問題 1/3) -->
+        <TextView
+            android:id="@+id/text_question_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:text="問題 1/3"
+            android:textSize="14sp" />
+
+        <!-- 出題される問題文 -->
+        <TextView
+            android:id="@+id/text_question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Be"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="32dp" />
+
+        <!-- 答えの入力欄 -->
+        <EditText
+            android:id="@+id/edit_answer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="答えを入力"
+            android:inputType="text"
+            android:gravity="center"
+            android:layout_marginBottom="24dp" />
+
+        <!-- 「解答」ボタン -->
+        <Button
+            android:id="@+id/button_submit_answer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="解答"
+            android:backgroundTint="#8BC34A"
+            android:textColor="@android:color/black" />
+
+    </LinearLayout>
+
+</LinearLayout>

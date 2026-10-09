@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="16dp"
+    android:gravity="center_vertical"
+    android:background="?android:attr/selectableItemBackground">
+
+    <!-- ★追加：削除モード用のチェックボックス（最初は非表示） -->
+    <CheckBox
+        android:id="@+id/checkboxDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:visibility="gone" />
+
+    <!-- 問題と答えを表示するテキスト -->
+    <TextView
+        android:id="@+id/text_card_content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="問題 / 答え"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:background="@drawable/border_background"
+        android:padding="8dp"
+        android:layout_marginEnd="16dp"/>
+
+    <!-- 星マークの画像 -->
+    <ImageView
+        android:id="@+id/image_star"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@android:drawable/btn_star_big_off"
+        android:contentDescription="星マーク" />
+
+</LinearLayout>

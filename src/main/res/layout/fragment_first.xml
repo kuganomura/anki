@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".FirstFragment">
+
+    <!-- 上部のボタンエリア（横並び） -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="16dp">
+
+        <!-- ★追加：タグ絞り込み用のプルダウン（Spinner） -->
+        <Spinner
+            android:id="@+id/spinner_tag_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginEnd="8dp" />
+
+        <!-- 「暗記を始める」ボタン -->
+        <Button
+            android:id="@+id/button_start_memorization"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="暗記を始める"
+            android:backgroundTint="#8BC34A"
+            android:textColor="@android:color/black" />
+
+        <!-- 余白 -->
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <!-- 「＋」ボタン -->
+        <ImageButton
+            android:id="@+id/button_add_card"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@android:drawable/ic_input_add"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="問題を追加" />
+
+    </LinearLayout>
+
+    <!-- 暗記カードのリスト（RecyclerView） -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_cards"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        tools:listitem="@layout/item_card" />
+
+</LinearLayout>
